@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL "https://fpp.ic3.dev/vtc/${VTC_VERSION}/vtc" -o /usr/local/bin/vtc && \
+RUN curl -fsSL "https://fpp.ic3.dev/vtc-k8s/${VTC_VERSION}/vtc" -o /usr/local/bin/vtc && \
     chmod 0755 /usr/local/bin/vtc
 
 WORKDIR /app/vtc
