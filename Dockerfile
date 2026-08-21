@@ -11,7 +11,4 @@ RUN curl -fsSL "https://fpp.ic3.dev/vtc-k8s/${VTC_VERSION}/vtc" -o /usr/local/bi
 
 WORKDIR /app/vtc
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod 0755 /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["vtc"]
